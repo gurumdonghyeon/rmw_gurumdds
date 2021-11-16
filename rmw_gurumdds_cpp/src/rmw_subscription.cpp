@@ -592,7 +592,7 @@ _take(
   }
 
   dds_UnsignedLongSeq * sample_sizes = dds_UnsignedLongSeq_create(1);
-  if (sample_infos == nullptr) {
+  if (sample_sizes == nullptr) {
     RMW_SET_ERROR_MSG("failed to create sample size sequence");
     dds_DataSeq_delete(data_values);
     dds_SampleInfoSeq_delete(sample_infos);
@@ -794,7 +794,7 @@ rmw_take_sequence(
   }
 
   dds_UnsignedLongSeq * sample_sizes = dds_UnsignedLongSeq_create(count);
-  if (sample_infos == nullptr) {
+  if (sample_sizes == nullptr) {
     RMW_SET_ERROR_MSG("failed to create sample size sequence");
     dds_DataSeq_delete(data_values);
     dds_SampleInfoSeq_delete(sample_infos);
@@ -943,7 +943,7 @@ _take_serialized(
   }
 
   dds_UnsignedLongSeq * sample_sizes = dds_UnsignedLongSeq_create(1);
-  if (sample_infos == nullptr) {
+  if (sample_sizes == nullptr) {
     RMW_SET_ERROR_MSG("failed to create sample size sequence");
     dds_DataSeq_delete(data_values);
     dds_SampleInfoSeq_delete(sample_infos);
